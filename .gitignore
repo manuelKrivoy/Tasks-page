@@ -8,7 +8,7 @@ node_modules/
 dist/
 
 # Compiled Java class files
-*.class
+*.class	
 
 # Compiled Python bytecode
 *.py[cod]
@@ -39,7 +39,6 @@ Thumbs.db
 *.app
 *.exe
 *.war
-*.env
 
 # Large media files
 *.mp4

@@ -23,7 +23,7 @@ app.engine(
 
   //middlewares
   app.use(morgan('dev')); //registra solicitudes http en la consola
-  app.use(express.urlencoded({extended:false})); // para poder leer datos desde un index.html
+  app.use(express.urlencoded({extended:false})); // para poder leer datos desde un index.html 
 
 //Routes
 app.use(indexRoutes);

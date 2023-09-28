@@ -6,10 +6,12 @@ router.get("/", (req, res) => {
   res.render("index");
 });
 
-router.post("/task/add", (req, res) => {
+router.post("/task/add", async (req, res) => {
   const task = Task(req.body);
-
-  res.send("saved");
+  
+  await task.save();  //guarda en base de datos
+  
+  res.redirect("/"); //Redirecciona a mainpage
 });
 
 router.get("/about", (req, res) => {
