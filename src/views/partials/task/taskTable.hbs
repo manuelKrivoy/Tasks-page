@@ -1,0 +1,25 @@
+
+<table>
+<thead>
+<tr>
+<th>nro:</th>
+<th>title:</th>
+<th>description:</th>
+<th>operations:</th>
+<tbody>
+  {{#each tasks}}  <! for de HBS>
+<tr>
+    <td>{{@index}}</td>
+    <td>{{title}}</td>
+    <td>{{description}}</td>
+    <td>
+        <button>Done</button>
+        <button>Delete</button>
+        <button>Update</button>
+    </td>
+</tr>
+  {{/each}}
+</tbody>
+</tr>
+</thead>
+</table>

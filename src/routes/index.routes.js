@@ -2,16 +2,25 @@ import express from "express";
 import Task from "../models/Task";
 
 const router = express.Router();
-router.get("/", (req, res) => {
-  res.render("index");
+router.get("/", async (req, res) => {
+
+  const tasks = await Task.find().lean(); //retorno tareas existentes, el .lean sirve para que devuelva una lista de objetos normales de JS, sin el .lean devolvería en formato mongodb
+
+  res.render("index", {tasks: tasks}); // le paso el objeto a index.hbs
 });
 
 router.post("/task/add", async (req, res) => {
-  const task = Task(req.body);
+
+  try {
+    const task = Task(req.body);
   
-  await task.save();  //guarda en base de datos
-  
-  res.redirect("/"); //Redirecciona a mainpage
+    await task.save();  //guarda en base de datos
+    
+    res.redirect("/"); //Redirecciona a mainpage
+  } catch (error) {
+    console.log(error);
+  }
+
 });
 
 router.get("/about", (req, res) => {
