@@ -2,5 +2,5 @@
 CRUD --Express --MongoDB
 
 ### Enviroment variables
-password
-PORT
+-password
+-PORT
