@@ -28,6 +28,8 @@ app.engine(
 //Routes
 app.use(indexRoutes);
 
+app.use(express.static(path.join(__dirname,"public")));
+
 
 
 

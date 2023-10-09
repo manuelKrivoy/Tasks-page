@@ -2,10 +2,10 @@
 <table class="table table-bordered table-hover table-primary">
 <thead>
 <tr>
-<th>nro:</th>
-<th>title:</th>
-<th>description:</th>
-<th>operations:</th>
+<th>N.</th>
+<th>Title:</th>
+<th>Description:</th>
+<th>Operations:</th>
 <tbody>
   {{#each tasks}}  <! for de HBS>
 <tr>
@@ -31,9 +31,10 @@
 </table>
 
   {{else}}
-    <div class="text-center text-dark">
-      <h1>No Tasks</h1>
-    </div>
+  <div class="h-100 d-flex align-items-center justify-content-center">
+      <img src="icons/empty-folder.png" alt="empty">
+  </div>
+
 
   {{/if}}
 
