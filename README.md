@@ -1,6 +1,6 @@
 # Tasks-page
 CRUD --Express --MongoDB
 
-### Enviroment variables
+### Environment variables
 -password  
 -PORT
