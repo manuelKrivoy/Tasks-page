@@ -1,7 +1,6 @@
 import { connect } from "mongoose";
-require('dotenv').config();
+import { password } from "./config";
 
-const password = process.env.password
 const connectDB = async () => {
   try {
     await connect(`mongodb+srv://krivoymanuel:${password}@crud.mgvmwdt.mongodb.net/?retryWrites=true&w=majority`);
